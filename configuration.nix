@@ -4,7 +4,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./bash.nix
     ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -104,19 +103,16 @@
     home-manager
     nerdfonts
     kate
- ];
+    ];
+
+ # Enable ZSH globally
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
 
- # Git in github
- programs.git = {
-    enable = true;
-    userName = "raonixos_u0";
-    userEmail = "raonixos_u0@nixos.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-      safe.directory = "$HOME/dotfiles";
-    };
-  };
+
+
  system.stateVersion = "24.11"; # Did you read the comment?
 
 

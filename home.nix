@@ -1,18 +1,21 @@
 { config, pkgs, ... }:
 
 {
+  imports= [
+  ];
   home.username = "raonixos_u0";
   home.homeDirectory = "/home/raonixos_u0";
   home.stateVersion = "24.05"; # Please read the comment before changing.
-  home.packages = [
-  ];
+  home.packages = with pkgs; [
+
+    ];
   home.file = {
   };
   home.sessionVariables = {
   };
   programs.home-manager.enable = true;
   #-----------------------------------------------------
-  programs.vim = {
+    programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [ ];
     settings = { ignorecase = true; };
@@ -23,7 +26,8 @@
 	'';
   };
 
-   # Git in github
+
+  # Git in github
  programs.git = {
     enable = true;
     userName = "raonixos_u0";
