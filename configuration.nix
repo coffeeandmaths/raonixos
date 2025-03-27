@@ -103,13 +103,13 @@
     home-manager
     nerdfonts
     kate
+    zsh
     ];
 
  # Enable ZSH globally
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
 
 
 
