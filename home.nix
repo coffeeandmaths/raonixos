@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/raonixos_u0";
   home.stateVersion = "24.05"; # Please read the comment before changing.
   home.packages = with pkgs; [
-
+      libreoffice-qt
     ];
   home.file = {
   };
