@@ -42,13 +42,13 @@
   services.displayManager.sddm.settings.General.DisplayServer = "wayland";
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 
   # Using X11 as a non-root user
   #services.displayManager.sddm.settings.General.DisplayServer = "x11-user";
 
   # Excluding kde packages 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  environment.plasma5.excludePackages = with pkgs.kdePackages; [
   plasma-browser-integration
   oxygen
   elisa
